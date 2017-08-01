@@ -167,8 +167,6 @@ public class StringHoe {
 	 * 
 	 * @param html
 	 *            The HTML to encode
-	 * @param encodedType
-	 *            0:html code, 1:decimal code ; default:1
 	 * @return The encoded data
 	 */
 	public static String htmlEncodeByHtmlCode(final String html) {
@@ -180,8 +178,6 @@ public class StringHoe {
 	 * 
 	 * @param html
 	 *            The HTML to encode
-	 * @param encodedType
-	 *            0:html code, 1:decimal code ; default:1
 	 * @return The encoded data
 	 */
 	public static String htmlEncodeByDecimalCode(final String html) {
@@ -261,7 +257,7 @@ public class StringHoe {
 	/**
 	 * Removes all spaces
 	 * 
-	 * @param value
+	 * @param str
 	 *            The input String
 	 * @return String without spaces
 	 */
@@ -697,7 +693,7 @@ public class StringHoe {
 	 * 
 	 * @param value
 	 *            The input String
-	 * @param chr
+	 * @param separator
 	 *            The separator character to use
 	 * @return String decamelized.
 	 */
@@ -863,7 +859,7 @@ public class StringHoe {
 	/**
 	 * Converts the first character of string to upper case.
 	 * 
-	 * @param input
+	 * @param value
 	 *            The string to convert.
 	 * @return Returns the converted string.
 	 */
@@ -877,7 +873,7 @@ public class StringHoe {
 	/**
 	 * Converts the first character of string to lower case.
 	 * 
-	 * @param input
+	 * @param value
 	 *            The string to convert.
 	 * @return Returns the converted string.
 	 */

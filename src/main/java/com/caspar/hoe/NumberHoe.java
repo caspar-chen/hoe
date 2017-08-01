@@ -35,7 +35,7 @@ public class NumberHoe {
 	}
 	
 	/**
-	 * Check if the string is a Non-positive integer (0 & negative integer)
+	 * Check if the string is a Non-positive integer (0 and negative integer)
 	 * @param str	input string
 	 * @return	The String to check
 	 */
@@ -53,7 +53,7 @@ public class NumberHoe {
 	}
 	
 	/**
-	 * Check if the string is a nonnegative integer (0 & positive integer)
+	 * Check if the string is a nonnegative integer (0 and positive integer)
 	 * @param str	input string
 	 * @return	The String to check
 	 */
@@ -121,7 +121,7 @@ public class NumberHoe {
 	/**
 	 * 把输入的金额转换为汉语中人民币的大写
 	 * 
-	 * @param numberOfMoney
+	 * @param money
 	 *            输入的金额
 	 * @return 对应的汉语大写
 	 */
@@ -203,7 +203,7 @@ public class NumberHoe {
 	/**
 	 * 把输入的金额转换为汉语中人民币的大写
 	 * 
-	 * @param numberOfMoney
+	 * @param numberStr
 	 *            输入的金额
 	 * @return 对应的汉语大写
 	 */
