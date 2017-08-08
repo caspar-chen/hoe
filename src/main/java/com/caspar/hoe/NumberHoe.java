@@ -8,7 +8,6 @@ import java.util.regex.Pattern;
  * Number manipulation library
  * 
  * @author caspar.chen
- * @date 2017-7-26
  */
 public class NumberHoe {
 
@@ -72,10 +71,9 @@ public class NumberHoe {
 	
 	/**
 	 * Greatest common divisor
-	 * 
-	 * @param a
-	 * @param b
-	 * @return
+	 * @param a	first number
+	 * @param b	second number
+	 * @return The greatest common divisor
 	 */
 	public static int gcd(int a, int b) {
 		return a % b == 0 ? b : gcd(b, a % b);
@@ -83,6 +81,8 @@ public class NumberHoe {
 
 	/**
 	 * Greatest common divisor
+	 * @param numbers numbers
+	 * @return The greatest common divisor
 	 */
 	public static int gcd(int... numbers) {
 		int[] intArr = Arrays.copyOf(numbers, numbers.length);
@@ -96,10 +96,9 @@ public class NumberHoe {
 
 	/**
 	 * Least common multiple
-	 * 
-	 * @param a
-	 * @param b
-	 * @return
+	 * @param a	first number
+	 * @param b	second number
+	 * @return The least common multiple
 	 */
 	public static int lcm(int a, int b) {
 		return a * b / gcd(a, b);
@@ -107,6 +106,8 @@ public class NumberHoe {
 
 	/**
 	 * Least common multiple
+	 * @param numbers numbers
+	 * @return The least common multiple
 	 */
 	public static int lcm(int... numbers) {
 		int[] intArr = Arrays.copyOf(numbers, numbers.length);

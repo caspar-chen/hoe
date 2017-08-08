@@ -8,12 +8,12 @@ import java.util.concurrent.ThreadLocalRandom;
  * Random manipulation library
  * 
  * @author caspar.chen
- * @date 2017-7-28
  */
 public class RandomHoe {
 
 	/**
 	 * Get a 32-bit random string
+	 * @return The random uuid
 	 */
 	public static String uuid() {
 		return UUID.randomUUID().toString().replace("-", "");
@@ -21,6 +21,7 @@ public class RandomHoe {
 
 	/**
 	 * Get a 32-bit random string with an uppercase
+	 * @return The random uuid
 	 */
 	public static String uuidUpper() {
 		return UUID.randomUUID().toString().replace("-", "").toUpperCase();
@@ -28,6 +29,7 @@ public class RandomHoe {
 
 	/**
 	 * Get a 16-bit random string
+	 * @return The random uuid
 	 */
 	public static String uuidBit16() {
 		return uuid().substring(8, 24);
@@ -35,6 +37,7 @@ public class RandomHoe {
 
 	/**
 	 * Get a 16-bit random string with an uppercase
+	 * @return The random uuid
 	 */
 	public static String uuidBit16Upper() {
 		return uuidBit16().toUpperCase();
@@ -47,6 +50,7 @@ public class RandomHoe {
 	 * @param bound
 	 *            the upper bound (exclusive). Must be positive.
 	 * @see ThreadLocalRandom
+	 * @return the next value
 	 */
 	public static int random(int bound) {
 		return ThreadLocalRandom.current().nextInt(bound);
@@ -150,6 +154,7 @@ public class RandomHoe {
 	/**
 	 * Returns a random object in the collection
 	 * @param list the collection
+	 * @param <T>  class
 	 * @return a random object
 	 */
 	public static <T> T randomGet(List<T> list) {

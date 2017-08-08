@@ -8,8 +8,6 @@ import java.util.Map.Entry;
 /**
  * String manipulation library
  * 
- * @author caspar.chen
- * @date 2017-7-26
  */
 public class StringHoe {
 
@@ -30,8 +28,8 @@ public class StringHoe {
 	 * append(&quot;h&quot;, &quot;o&quot;, &quot;e&quot;) = &quot;hoe&quot;
 	 * </pre>
 	 * 
-	 * @param appends
-	 * @return
+	 * @param appends	appends an array of strings to append
+	 * @return full String
 	 */
 	public static String append(final String... appends) {
 		StringBuffer sb = new StringBuffer();
@@ -43,14 +41,13 @@ public class StringHoe {
 
 	/**
 	 * append before the string
-	 * 
 	 * <pre>
 	 * appendPre(&quot;e&quot;, &quot;h&quot;, &quot;o&quot;) = &quot;hoe&quot;
 	 * </pre>
 	 * 
-	 * @param str
-	 * @param appends
-	 * @return
+	 * @param str initial String
+	 * @param appends appends an array of strings to append
+	 * @return full String 
 	 */
 	public static String appendPre(final String str, final String... appends) {
 		StringBuffer sb = new StringBuffer();
@@ -199,6 +196,7 @@ public class StringHoe {
 	 * 
 	 * @param cs
 	 *            the CharSequence to check
+	 * @return  true if CharSequence is null or empty
 	 */
 	public static boolean isEmpty(final CharSequence cs) {
 		int strLen;
@@ -216,7 +214,9 @@ public class StringHoe {
 
 	/**
 	 * Checks if a CharSequence is not whitespace, empty and null
-	 * 
+	 * @param cs
+	 *            the CharSequence to check
+	 * @return  true if CharSequence is not whitespace, empty and null
 	 * @see StringHoe#isEmpty
 	 */
 	public static boolean isNotEmpty(final CharSequence cs) {
@@ -226,8 +226,8 @@ public class StringHoe {
 	/**
 	 * Get a 32-bit md5 encrypted string
 	 * 
-	 * @param source
-	 * @return
+	 * @param source The input string
+	 * @return encrypted string
 	 */
 	public static String md5Bit32(String source) {
 		return md5(source, 32);
@@ -236,8 +236,8 @@ public class StringHoe {
 	/**
 	 * Get a 16-bit md5 encrypted string
 	 * 
-	 * @param source
-	 * @return
+	 * @param source The input string
+	 * @return encrypted string
 	 */
 	public static String md5Bit16(String source) {
 		return md5(source, 16);

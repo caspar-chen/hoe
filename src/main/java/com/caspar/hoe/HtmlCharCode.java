@@ -4,8 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * HTML special character encoding table
+ * 
  * @author caspar.chen
- * @date 2017-7-28
  */
 public class HtmlCharCode {
 
