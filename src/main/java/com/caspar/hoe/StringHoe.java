@@ -185,13 +185,13 @@ public class StringHoe {
 	 * Checks if a CharSequence is whitespace, empty or null
 	 * 
 	 * <pre>
-	 * StringUtil.isEmpty(null)      = true
-	 * StringUtil.isEmpty("null")    = true
-	 * StringUtil.isEmpty("NULL")    = true
-	 * StringUtil.isEmpty("")        = true
-	 * StringUtil.isEmpty(" ")       = true
-	 * StringUtil.isEmpty("abc")     = false
-	 * StringUtil.isEmpty("  abc  ") = false
+	 * isEmpty(null)      = true
+	 * isEmpty("null")    = true
+	 * isEmpty("NULL")    = true
+	 * isEmpty("")        = true
+	 * isEmpty(" ")       = true
+	 * isEmpty("abc")     = false
+	 * isEmpty("  abc  ") = false
 	 * </pre>
 	 * 
 	 * @param cs

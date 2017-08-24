@@ -1,8 +1,8 @@
 package com.caspar.hoe;
 
 import java.util.List;
+import java.util.Random;
 import java.util.UUID;
-import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * Random manipulation library
@@ -11,6 +11,7 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 public class RandomHoe {
 
+	private static Random r = new Random();
 	/**
 	 * Get a 32-bit random string
 	 * @return The random uuid
@@ -53,7 +54,7 @@ public class RandomHoe {
 	 * @return the next value
 	 */
 	public static int random(int bound) {
-		return ThreadLocalRandom.current().nextInt(bound);
+		return r.nextInt(bound);
 	}
 
 	/**
@@ -67,7 +68,7 @@ public class RandomHoe {
 	 * @return the next value
 	 */
 	public static int random(int least, int bound) {
-		return ThreadLocalRandom.current().nextInt(least, bound);
+		return r.nextInt(bound - least) + least;
 	}
 
 	/**
@@ -81,7 +82,7 @@ public class RandomHoe {
 	 * @return the next value
 	 */
 	public static long random(long least, long bound) {
-		return ThreadLocalRandom.current().nextLong(least, bound);
+		return r.nextLong();
 	}
 	
 	/**
@@ -91,10 +92,12 @@ public class RandomHoe {
 	 *            
 	 * @return the pseudorandom
 	 */
-	public static long randomLimit(int limit) {
-		long least = Long.valueOf(StringHoe.padRight("1", "0", limit));
-		long bound = Long.valueOf(StringHoe.padRight("1", "0", limit + 1));
-		return random(least, bound);
+	public static String randomLimit(int limit) {
+		StringBuffer sb = new StringBuffer();
+		for (int i = 0; i < limit; i++) {
+			sb.append(random(9));	
+		}
+		return sb.toString();
 	}
 	
 	/**
