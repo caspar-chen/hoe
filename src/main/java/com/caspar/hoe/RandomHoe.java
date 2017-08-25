@@ -50,7 +50,6 @@ public class RandomHoe {
 	 * 
 	 * @param bound
 	 *            the upper bound (exclusive). Must be positive.
-	 * @see ThreadLocalRandom
 	 * @return the next value
 	 */
 	public static int random(int bound) {
