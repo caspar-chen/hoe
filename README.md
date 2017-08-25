@@ -13,11 +13,11 @@ To use maven just add this dependency to your  `pom.xml`.
 <dependency>
     <groupId>com.github.caspar-chen</groupId>
     <artifactId>hoe</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
 </dependency>
 ```
 
-You can refer to Javadocs at ```doc/```
+You can refer to Javadocs at ```docs/```
 
 License
 -------

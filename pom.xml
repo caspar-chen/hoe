@@ -1,20 +1,110 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
 
-  <groupId>com.caspar</groupId>
-  <artifactId>hoe</artifactId>
-  <version>0.0.1</version>
-  <packaging>jar</packaging>
+    <groupId>com.github.caspar-chen</groupId>
+    <artifactId>hoe</artifactId>
+    <version>0.0.2</version>
+    <packaging>jar</packaging>
 
-  <name>hoe</name>
-  <url>http://maven.apache.org</url>
+    <name>hoe</name>
+    <url>https://github.com/caspar-chen/hoe</url>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
-  <dependencies>
-  </dependencies>
-  
+    <dependencies>
+    </dependencies>
+
+    <licenses>
+        <license>
+            <name>The MIT license</name>
+            <url>https://github.com/caspar-chen/hoe/blob/master/LICENSE.TXT</url>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/caspar-chen/hoe</url>
+        <connection>scm:git:https://github.com/caspar-chen/hoe.git</connection>
+        <developerConnection>https://github.com/caspar-chen/hoe</developerConnection>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>caspar.chen</name>
+            <email>xmlhttprequest@163.com</email>
+            <url>https://github.com/caspar-chen</url>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
+
+
+    <profiles>
+        <profile>
+            <id>release</id>
+            <build>
+                <plugins>
+                    <!-- Source -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>2.2.1</version>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>jar-no-fork</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <!-- Javadoc -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <version>2.9.1</version>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <!-- GPG -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.5</version>
+                        <executions>
+                            <execution>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+            <distributionManagement>
+                <snapshotRepository>
+		            <id>ossrh</id>
+		            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		        </snapshotRepository>
+		        <repository>
+		            <id>ossrh</id>
+		            <name>Maven Central Staging Repository</name>
+		            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		        </repository>
+            </distributionManagement>
+        </profile>
+    </profiles>
 </project>
