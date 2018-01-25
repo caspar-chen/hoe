@@ -25,7 +25,7 @@ public class RandomHoe {
 	 * @return The random uuid
 	 */
 	public static String uuidUpper() {
-		return UUID.randomUUID().toString().replace("-", "").toUpperCase();
+		return uuid().toUpperCase();
 	}
 
 	/**

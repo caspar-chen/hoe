@@ -28,7 +28,8 @@ public class StringHoe {
 	 * append(&quot;h&quot;, &quot;o&quot;, &quot;e&quot;) = &quot;hoe&quot;
 	 * </pre>
 	 * 
-	 * @param appends	appends an array of strings to append
+	 * @param appends
+	 *            appends an array of strings to append
 	 * @return full String
 	 */
 	public static String append(final String... appends) {
@@ -41,13 +42,16 @@ public class StringHoe {
 
 	/**
 	 * append before the string
+	 * 
 	 * <pre>
 	 * appendPre(&quot;e&quot;, &quot;h&quot;, &quot;o&quot;) = &quot;hoe&quot;
 	 * </pre>
 	 * 
-	 * @param str initial String
-	 * @param appends appends an array of strings to append
-	 * @return full String 
+	 * @param str
+	 *            initial String
+	 * @param appends
+	 *            appends an array of strings to append
+	 * @return full String
 	 */
 	public static String appendPre(final String str, final String... appends) {
 		StringBuffer sb = new StringBuffer();
@@ -138,6 +142,15 @@ public class StringHoe {
 	}
 
 	/**
+	 * Convert empty to null object
+	 * @param str
+	 * @return
+	 */
+	public static String emptyToNull(final String str) {
+		return isEmpty(str) ? null : str;
+	}
+
+	/**
 	 * Converts all HTML entities to html code.
 	 * 
 	 * @param encodedHtml
@@ -196,7 +209,7 @@ public class StringHoe {
 	 * 
 	 * @param cs
 	 *            the CharSequence to check
-	 * @return  true if CharSequence is null or empty
+	 * @return true if CharSequence is null or empty
 	 */
 	public static boolean isEmpty(final CharSequence cs) {
 		int strLen;
@@ -214,9 +227,10 @@ public class StringHoe {
 
 	/**
 	 * Checks if a CharSequence is not whitespace, empty and null
+	 * 
 	 * @param cs
 	 *            the CharSequence to check
-	 * @return  true if CharSequence is not whitespace, empty and null
+	 * @return true if CharSequence is not whitespace, empty and null
 	 * @see StringHoe#isEmpty
 	 */
 	public static boolean isNotEmpty(final CharSequence cs) {
@@ -226,7 +240,8 @@ public class StringHoe {
 	/**
 	 * Get a 32-bit md5 encrypted string
 	 * 
-	 * @param source The input string
+	 * @param source
+	 *            The input string
 	 * @return encrypted string
 	 */
 	public static String md5Bit32(String source) {
@@ -236,7 +251,8 @@ public class StringHoe {
 	/**
 	 * Get a 16-bit md5 encrypted string
 	 * 
-	 * @param source The input string
+	 * @param source
+	 *            The input string
 	 * @return encrypted string
 	 */
 	public static String md5Bit16(String source) {
