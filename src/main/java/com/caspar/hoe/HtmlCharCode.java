@@ -10,7 +10,7 @@ import java.util.Map;
  */
 public class HtmlCharCode {
 
-	public static final Map<String, HtmlChar> decodedEntities = new HashMap<String, HtmlChar>() {
+	public static final Map<String, HtmlChar> DECODED_ENTITIES = new HashMap<String, HtmlChar>() {
 		private static final long serialVersionUID = 1L;
 		{
 			put("\"", new HtmlChar("\"", "&quot;", "&#34;"));

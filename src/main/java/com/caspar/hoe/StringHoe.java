@@ -7,7 +7,7 @@ import java.util.Map.Entry;
 
 /**
  * String manipulation library
- * 
+ * @author caspar.chen
  */
 public class StringHoe {
 
@@ -947,7 +947,7 @@ public class StringHoe {
 	 */
 	private static String htmlDecode(final String encodedHtml, int encodedType) {
 		String str = collapseWhitespace(encodedHtml);
-		for (Entry<String, HtmlChar> entry : HtmlCharCode.decodedEntities
+		for (Entry<String, HtmlChar> entry : HtmlCharCode.DECODED_ENTITIES
 				.entrySet()) {
 			switch (encodedType) {
 			case 0:
@@ -978,7 +978,7 @@ public class StringHoe {
 	 */
 	private static String htmlEncode(final String html, int encodedType) {
 		String str = collapseWhitespace(html);
-		for (Entry<String, HtmlChar> entry : HtmlCharCode.decodedEntities
+		for (Entry<String, HtmlChar> entry : HtmlCharCode.DECODED_ENTITIES
 				.entrySet()) {
 			switch (encodedType) {
 			case 0:
