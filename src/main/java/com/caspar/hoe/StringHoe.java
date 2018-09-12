@@ -913,13 +913,13 @@ public class StringHoe {
 			return null;
 		}
 		MessageDigest md;
-		char hexDigits[] = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+		char[] hexDigits = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
 				'a', 'b', 'c', 'd', 'e', 'f' };
 		try {
 			md = MessageDigest.getInstance("MD5");
 			md.update(source.getBytes(Charset.defaultCharset()));
-			byte tmp[] = md.digest();
-			char chstr[] = new char[tmp.length * 2];
+			byte[] tmp = md.digest();
+			char[] chstr = new char[tmp.length * 2];
 			int k = 0;
 			for (int i = 0; i < tmp.length; i++) {
 				byte byte0 = tmp[i];
